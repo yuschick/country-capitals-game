@@ -75,7 +75,7 @@
             });
 
             // display correct anwer
-            correctAnswer.textContent = currentCountry.capital;
+            correctAnswer.textContent = currentCountry.capital ? currentCountry.capital : 'Trick Question! No Capital.';
 
             // Update result text
             if (didWin) {
