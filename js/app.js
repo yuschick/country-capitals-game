@@ -105,7 +105,7 @@
                 }
             };
 
-            http.open('GET', `https://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=dc6zaTOxFJmzC`, true);
+            http.open('GET', `api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=dc6zaTOxFJmzC`, true);
             http.send();
         }
 
