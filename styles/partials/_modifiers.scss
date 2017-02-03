@@ -1,0 +1,29 @@
+.has-spacer {
+    &:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 0.25rem 0;
+        width: 100%;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-flex {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.is-strong {
+    font-weight: 700;
+}
+
+.is-centered {
+    text-align: center;
+}

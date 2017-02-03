@@ -1,0 +1,280 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font: 16px/1.25 "Arsenal", sans-serif; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%; }
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+::-moz-selection {
+  color: #fff;
+  background: #2c3e50; }
+
+::selection {
+  color: #fff;
+  background: #2c3e50; }
+
+body {
+  background: url("https://www.transparenttextures.com/patterns/checkered-pattern.png") #f1f0f5;
+  font-size: 16px;
+  line-height: 1.6; }
+
+header {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  header img {
+    height: 40px;
+    margin: 0 1rem;
+    opacity: 0.75; }
+  header h1 {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center; }
+
+button {
+  background: #090;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.25s ease; }
+  button:hover {
+    background: #00b300; }
+
+.begin-container,
+.question-container,
+.results-container {
+  height: calc(100vh - 60px); }
+
+.begin-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center; }
+  .begin-container .start-btn {
+    background: #900;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    transition: background 0.25s ease; }
+    .begin-container .start-btn:hover {
+      background: #b30000; }
+    .begin-container .start-btn.disabled {
+      background: #eee;
+      opacity: 0.75; }
+
+.question-container,
+.results-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: center; }
+  .question-container h2,
+  .results-container h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center; }
+  .question-container form,
+  .results-container form {
+    align-items: stretch;
+    display: flex;
+    margin: 0 auto;
+    max-width: 430px;
+    width: 90%; }
+  .question-container input[type=text],
+  .results-container input[type=text] {
+    font-size: 2rem;
+    max-width: 357px;
+    padding: 0.5rem 1rem;
+    width: 83%; }
+  .question-container input[type=submit],
+  .results-container input[type=submit] {
+    background: #090;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.25s ease;
+    width: 78px; }
+    .question-container input[type=submit]:hover,
+    .results-container input[type=submit]:hover {
+      background: #00b300; }
+
+.loading-container {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 2; }
+
+.giphy-container {
+  margin: 1rem auto;
+  max-height: 300px;
+  max-width: 500px;
+  overflow: hidden;
+  text-align: center;
+  width: 95%; }
+
+@media screen and (max-width: 610px) {
+  header h1 {
+    font-size: 1.5rem;
+    line-height: 1.5; }
+  header img {
+    height: 36px; }
+
+  .begin-container,
+  .question-container,
+  .results-container {
+    height: calc(100vh - 36px); } }
+.has-spacer:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0.25rem 0;
+  width: 100%; }
+
+.is-hidden {
+  display: none; }
+
+.is-flex {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.is-strong {
+  font-weight: 700; }
+
+.is-centered {
+  text-align: center; }
+
+/*# sourceMappingURL=app.css.map */
