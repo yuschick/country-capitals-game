@@ -2,7 +2,7 @@
 
 Simple. A country will be displayed and you must guess its capital city. Right or wrong, you will at least be met with a suitably entertaining gif.
 
-##[Click Here to Play](https://yuschick.github.io/country-capitals-game/)
+## [Click Here to Play](https://yuschick.github.io/country-capitals-game/)
 
 ## Background
 

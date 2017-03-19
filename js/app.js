@@ -58,8 +58,6 @@
         function clearAll() {
             guessForm.reset();
             giphyContainer.innerHTML = '';
-            // correctAnswer.textContent = '';
-            // resultText.textContent = '';
         }
 
         function displayResults(resultImg) {
@@ -83,8 +81,6 @@
             } else {
                 resultText.textContent = 'Womp womp!';
             }
-
-            // resultText.textContent = didWin ? 'Winner, winner, chicken dinner.' : 'Womp womp.';
         }
 
         function getGiphy(result) {
@@ -137,8 +133,6 @@
                 tempObj.capital = countriesData[index].capital;
                 allCountriesArray.push(tempObj);
             }
-
-            // console.log(allCountriesArray);
         }
 
         function getRandomCountry() {
