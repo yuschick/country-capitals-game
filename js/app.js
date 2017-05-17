@@ -40,7 +40,9 @@
         .replace(new RegExp("[òóôõö]", 'g'), "o")
         .replace(new RegExp("œ", 'g'), "oe")
         .replace(new RegExp("[ùúûü]", 'g'), "u")
-        .replace(new RegExp("[ýÿ]", 'g'), "y");
+        .replace(new RegExp("[ýÿ]", 'g'), "y")
+        .replace(/,/g,"")
+        .replace(/./g,"");
       // Replace taken & modified from: http://stackoverflow.com/a/990922/544847
     }
 
