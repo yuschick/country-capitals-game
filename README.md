@@ -10,6 +10,7 @@ Simple. A country will be displayed and you must guess its capital city. Right o
 - [ ] Add a screenshot to the README file
 - [ ] Include an ongoing score counter that is saved in Local Storage
 - [x] Remove special characters and punctuation from answers
+- [x] Set focus to text field on play
 
 ## Credits
 

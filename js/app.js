@@ -8,9 +8,10 @@
     const questionContainer = document.querySelector('.question-container');
     const resultsContainer = document.querySelector('.results-container');
     const loadingContainer = document.querySelector('.loading-container');
+    const guessBox = document.getElementById('capital-guess');
     const guessForm = document.querySelector('.guess-form');
-    const loseWords = ['womp womp', 'duh', 'wrong', 'fml', 'epic fail', 'the worst', 'terrible', 'awful', "sadness", 'failure'];
-    const winWords = ['get down', 'winner', 'sweet', 'omg', 'party', 'celebrate', 'lit', 'turnt', 'success', 'shocked'];
+    const loseWords = ['womp womp', 'duh', 'wrong', 'fml', 'idiot', 'dumbass', 'terrible', 'awful', "sadness", 'failure'];
+    const winWords = ['get down', 'winner', 'sweet', 'omg', 'party', 'celebrate', 'lit', 'hype', 'success', 'chicken dinner'];
     let currentCountry = '';
     let allCountriesArray = [];
     let didWin = false;
@@ -41,8 +42,8 @@
         .replace(new RegExp("œ", 'g'), "oe")
         .replace(new RegExp("[ùúûü]", 'g'), "u")
         .replace(new RegExp("[ýÿ]", 'g'), "y")
-        .replace(/,/g,"")
-        .replace(/./g,"");
+        .replace(/,/g, "")
+        .replace(/-/g, "");
       // Replace taken & modified from: http://stackoverflow.com/a/990922/544847
     }
 
@@ -128,6 +129,7 @@
         beginContainer.classList.add('is-hidden');
         questionContainer.classList.remove('is-hidden');
         resultsContainer.classList.add('is-hidden');
+        guessBox.focus();
       } else if (activeScreen === 'results') {
         beginContainer.classList.add('is-hidden');
         questionContainer.classList.add('is-hidden');
