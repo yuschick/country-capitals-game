@@ -4,11 +4,10 @@ Simple. A country will be displayed and you must guess its capital city. Right o
 ## [Click Here to Play](https://yuschick.github.io/country-capitals-game/)
 
 ## To Do
-- [ ] Create a new design that leverages CSS Grid
 - [ ] Convert to use the JavaScript Fetch API
-- [ ] Find areas to leverage more ES6 syntax
 - [ ] Add a screenshot to the README file
-- [ ] Include an ongoing score counter that is saved in Local Storage
+- [x] Create a new design that leverages CSS Grid
+- [x] Include an ongoing score counter that is saved in Local Storage
 - [x] Remove special characters and punctuation from answers
 - [x] Set focus to text field on play
 

@@ -1,0 +1,33 @@
+.question-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  h2 {
+    font: 2rem/1 $secondaryFont;
+    font-weight: 700;
+    margin: $vspace 0;
+  }
+
+  input[type=text] {
+    font: 1.5rem/1 $primaryFont;
+    margin: 0 $hspace;
+    padding: $vspace $hspace;
+  }
+
+  input[type=submit] {
+    background: #090;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font: 1.5rem/1 $primaryFont;
+    padding: $vspace $hspace;
+    transition: background 0.25s ease;
+
+    &:hover {
+      background: lighten(#090, 5%);
+    }
+  }
+}

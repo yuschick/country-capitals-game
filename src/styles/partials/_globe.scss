@@ -1,0 +1,36 @@
+/*
+https://codepen.io/lunecia/pen/adZMGR
+*/
+.globe {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #00B;
+
+  svg {
+    animation: rotation 10s linear 0s infinite;
+    height: 140px;
+    width: 547px;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+
+  from {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 800px) {
+  .globe {
+    height: 100px;
+    width: 100px;
+
+    svg {
+      height: 100px;
+      width: 500px;
+    }
+  }
+}

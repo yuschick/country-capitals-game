@@ -1,3 +1,5 @@
+const util = require('./util');
+
 (function() {
   "use strict";
 
@@ -8,6 +10,8 @@
     const questionContainer = document.querySelector('.question-container');
     const resultsContainer = document.querySelector('.results-container');
     const loadingContainer = document.querySelector('.loading-container');
+    const scoreDisplay = document.querySelector('.score');
+    const clearBtn = document.querySelector('.clear-score');
     const guessBox = document.getElementById('capital-guess');
     const guessForm = document.querySelector('.guess-form');
     const loseWords = ['womp womp', 'duh', 'wrong', 'fml', 'idiot', 'dumbass', 'terrible', 'awful', "sadness", 'failure'];
@@ -19,6 +23,35 @@
     let correctAnswer = document.querySelector('.correct-answer');
     let resultText = document.querySelector('.result-text');
     let giphyContainer = document.querySelector('.giphy-container');
+    let scoreObj = util.localStorage.get('capitalScore') || {
+      correct: 0,
+      total: 0
+    };
+
+    const scoreKeeper = {
+      display() {
+        scoreDisplay.textContent = `${scoreObj.correct}/${scoreObj.total}`;
+        if (scoreObj.total > 0) {
+          clearBtn.classList.remove('is-hidden');
+        } else {
+          clearBtn.classList.add('is-hidden');
+        }
+      },
+
+      update(correct) {
+        scoreObj.total++;
+        if (correct) scoreObj.correct++;
+      },
+      reset() {
+        scoreObj = {
+          correct: 0,
+          total: 0
+        };
+      },
+      store() {
+        util.localStorage.set('capitalScore', scoreObj);
+      }
+    }
 
     const loading = {
       show() {
@@ -28,6 +61,52 @@
         loadingContainer.classList.add('is-hidden');
       }
     };
+
+    function bindEvents() {
+      startBtn.addEventListener('click', () => {
+        event.preventDefault();
+        play();
+      });
+      guessForm.addEventListener('submit', () => {
+        event.preventDefault();
+        const guess = event.target[0].value;
+        checkGuess(guess);
+      });
+      playAgainBtn.addEventListener('click', () => {
+        event.preventDefault();
+        clearAll();
+        play();
+      });
+      clearBtn.addEventListener('click', () => {
+        clearScore();
+      });
+    }
+
+    function checkGuess(guess) {
+      if (cleanCharacters(guess) === cleanCharacters(currentCountry.capital)) {
+        getGiphy();
+        didWin = true;
+        scoreKeeper.update(didWin);
+        scoreKeeper.display();
+      } else {
+        getGiphy('loser');
+        didWin = false;
+        scoreKeeper.update(didWin);
+        scoreKeeper.display();
+      }
+      scoreKeeper.store();
+    }
+
+    function clearAll() {
+      guessForm.reset();
+      giphyContainer.innerHTML = '';
+    }
+
+    function clearScore() {
+      util.localStorage.clear('capitalScore');
+      scoreKeeper.reset();
+      scoreKeeper.display();
+    }
 
     function cleanCharacters(string) {
       return String(string)
@@ -45,38 +124,6 @@
         .replace(/,/g, "")
         .replace(/-/g, "");
       // Replace taken & modified from: http://stackoverflow.com/a/990922/544847
-    }
-
-    function bindEvents() {
-      startBtn.addEventListener('click', () => {
-        event.preventDefault();
-        play();
-      });
-      guessForm.addEventListener('submit', () => {
-        event.preventDefault();
-        const guess = event.target[0].value;
-        checkGuess(guess);
-      });
-      playAgainBtn.addEventListener('click', () => {
-        event.preventDefault();
-        clearAll();
-        play();
-      });
-    }
-
-    function checkGuess(guess) {
-      if (cleanCharacters(guess) === cleanCharacters(currentCountry.capital)) {
-        getGiphy();
-        didWin = true;
-      } else {
-        getGiphy('loser');
-        didWin = false;
-      }
-    }
-
-    function clearAll() {
-      guessForm.reset();
-      giphyContainer.innerHTML = '';
     }
 
     function displayResults(resultImg) {
@@ -188,6 +235,7 @@
     function init() {
       loadCountries();
       bindEvents();
+      scoreKeeper.display();
     }
 
     return {

@@ -1,0 +1,32 @@
+.results-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font: 1.25rem/1 $primaryFont;
+    margin: $vspace 0;
+  }
+
+  h2 {
+    font: 2rem/1 $secondaryFont;
+    font-weight: 700;
+    margin: $vspace 0;
+  }
+
+  button {
+    background: #090;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font: 1.5rem/1 $primaryFont;
+    margin: $vspace 0;
+    padding: $vspace $hspace;
+    transition: background 0.25s ease;
+
+    &:hover {
+      background: lighten(#090, 5%);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+footer {
+  align-items: center;
+  background: #dadada;
+  display: flex;
+  justify-content: space-between;
+  padding: $vspace $hspace;
+
+  button {
+    font-size: 1rem;
+    padding: $vspace $hspace;
+
+    &:hover {
+      background: #d33;
+      cursor: pointer;
+    }
+  }
+}

@@ -79,62 +79,49 @@ u,
 ul,
 var,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
-	-webkit-backface-visibility: hidden;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
-	font: 16px/1.25 $primaryFont;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-family: $primaryFont;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  content: '';
+  content: none;
 }
 
 img {
-	border: 0;
-	height: auto;
-	max-width: 100%;
+  border: 0;
+  height: auto;
+  max-width: 100%;
 }
 
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
-}
-
-::-moz-selection {
-	color: #fff;
-	background: #2c3e50;
-}
-
-::selection {
-	color: #fff;
-	background: #2c3e50;
+  box-sizing: border-box;
 }

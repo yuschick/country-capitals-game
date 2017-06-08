@@ -1,0 +1,23 @@
+.sidebar-container {
+  align-items: center;
+  background-color: #6699ff;
+  background-image: url("https://www.transparenttextures.com/patterns/green-gobbler.png");
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+  justify-content: center;
+
+  p {
+    background: #3366cc;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: $vspace $hspace*3;
+    text-align: center;
+  }
+}
+
+h1 {
+  font: 3rem/1 $secondaryFont;
+  margin: $vspace 0;
+  text-align: center;
+}
