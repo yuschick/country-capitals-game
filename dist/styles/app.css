@@ -286,6 +286,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   width: 100%; }
   .question-container h2 {
     font: 2rem/1 "Josefin Slab", serif;
@@ -301,6 +302,7 @@ footer {
     color: #fff;
     cursor: pointer;
     font: 1.5rem/1 "Raleway", sans-serif;
+    margin: 10px 10px;
     padding: 10px 10px;
     -webkit-transition: background 0.25s ease;
     -o-transition: background 0.25s ease;
